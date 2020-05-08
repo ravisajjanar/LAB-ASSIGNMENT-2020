@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int i,j,high;
+    int mark[5][3];
+    printf("\nENTER THE 5 STUDENTS MARKS IN 3 SUBJECT\n");
+    for (i=0;i<5;i++)
+       {
+           printf("ENTER THE MARKS OF STUDENT %d\n",i+1);
+               for (j=0;j<3;j++)
+                  scanf("%d",&mark[i][j]);
+       }
+    high=mark[0][0];
+    for (j=0;j<3;j++)
+      {
+        for (i=0;i<5;i++)
+        {
+          if (mark[i][j]>high)
+                 high=mark[i][j];
+        }
+           printf("\nHIGHEST MARK IN SUBJECT %d is %d:",j+1,high);
+           high=mark[i+1][0];
+
+      }
+   return 0;
+}
